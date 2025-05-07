@@ -117,10 +117,10 @@ const SurveyManagerPage = () => {
       {showForm && (
         <div className="card mb-4">
           <div className="card-body">
-            <h3 className="card-title h5 mb-4">Create New Survey</h3>
+            <h3 className="card-title h5 mb-4">Yeni Anket Oluştur</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label className="form-label">Title</label>
+                <label className="form-label">Başlık</label>
                 <input
                   type="text"
                   className="form-control"
@@ -131,7 +131,7 @@ const SurveyManagerPage = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Description</label>
+                <label className="form-label">Açıklama</label>
                 <textarea
                   className="form-control"
                   rows="3"
@@ -157,7 +157,7 @@ const SurveyManagerPage = () => {
                     </div>
 
                     <div className="mb-3">
-                      <label className="form-label">Question Text</label>
+                      <label className="form-label">Soru Metni</label>
                       <input
                         type="text"
                         className="form-control"
@@ -168,7 +168,7 @@ const SurveyManagerPage = () => {
                     </div>
 
                     <div className="mb-3">
-                      <label className="form-label">Question Type</label>
+                      <label className="form-label">Soru Tipi</label>
                       <select
                         className="form-select"
                         value={question.type}
@@ -236,12 +236,12 @@ const SurveyManagerPage = () => {
                 className="btn btn-outline-primary mb-3"
                 onClick={addQuestion}
               >
-                Add Question
+                Soru Ekle
               </button>
 
               <div>
                 <button type="submit" className="btn btn-primary">
-                  Create Survey
+                  Anket Oluştur
                 </button>
               </div>
             </form>
@@ -251,9 +251,9 @@ const SurveyManagerPage = () => {
 
       <div className="card">
         <div className="card-body">
-          <h3 className="card-title h5 mb-4">Existing Surveys</h3>
+          <h3 className="card-title h5 mb-4">Mevcut Anketler</h3>
           {surveys.length === 0 ? (
-            <p className="text-muted">No surveys found.</p>
+            <p className="text-muted">Anket bulunamadı.</p>
           ) : (
             <div className="list-group">
               {surveys.map((survey) => (
